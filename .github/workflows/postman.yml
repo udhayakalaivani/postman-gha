@@ -1,0 +1,17 @@
+name: api.postman
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoketests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: petstore-api
+        uses: matt-ball/newman-action@master
+        with:
+          collection: petstore.postman_collection.json
+          environment: petstorenv.postman_environment.json
