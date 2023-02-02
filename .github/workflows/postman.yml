@@ -13,5 +13,5 @@ jobs:
       - name: petstore-api
         uses: matt-ball/newman-action@master
         with:
-          collection: petstore.postman_collection.json
-          environment: petstorenv.postman_environment.json
+          collection: Petstore.postman_collection.json
+          environment: Petstorenv.postman_environment.json
