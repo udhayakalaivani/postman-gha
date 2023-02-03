@@ -15,3 +15,6 @@ jobs:
         with:
           collection: Petstore.postman_collection.json
           environment: Petstorenv.postman_environment.json
+          reporters: '["emojitrain"]'
+          delayRequest: 5000
+          envVar: '[{ "key": "url", "value": "http://localhost:3000" }]'
