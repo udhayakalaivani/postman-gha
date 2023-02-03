@@ -16,7 +16,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{baseUrl}}/v2/pet/findByStatus?status=available",
+					"raw": "{{baseUrl}}/v2/pet/findByStatus?status=xxxxx",
 					"host": [
 						"{{baseUrl}}"
 					],
