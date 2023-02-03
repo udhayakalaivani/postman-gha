@@ -19,8 +19,9 @@ jobs:
     # Install the newman command line utility and also install the html extra reporter
       - name: Install newman
         run: |
-         npm install -g newman
+         npm install -g newman         
          npm install -g newman-reporter-htmlextra
+         npm run build
 
     # Make directory to upload the test results
       - name: Make Directory for results
@@ -33,8 +34,8 @@ jobs:
 
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with: 
          name: RunReports
-         path: testResults
+         path: .next/
      
