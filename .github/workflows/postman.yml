@@ -15,6 +15,9 @@ jobs:
         with:
           collection: Petstore.postman_collection.json
           environment: Petstorenv.postman_environment.json
-          reporters: '["emojitrain"]'
-          delayRequest: 5000
-          envVar: '[{ "key": "url", "value": "http://localhost:3000" }]'
+
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
+        with: 
+          name: RunReports
+          path: testResults
