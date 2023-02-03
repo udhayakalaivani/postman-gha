@@ -16,6 +16,18 @@ jobs:
           collection: Petstore.postman_collection.json
           environment: Petstorenv.postman_environment.json
 
+#Step5: Create a Test Results directory and upload the results to it
+      - name: Make Directory for results
+        run: mkdir -p testResults
+      
+#Step6: Run POSTMAN collection using Newman Action package from Marketplace Community
+      - name: Sourcing Private API - PROD Tests
+        uses: matt-ball/newman-action@master
+        with:
+          collection: dealer.qa.sourcing.private.api.smoke.test.postman_collection.json
+          environment: dealer.qa.sourcing.private.api.smoke.data.PROD.postman_environment.json
+
+#Step7: Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with: 
